@@ -8,7 +8,7 @@ contract NewLib is ERC1155{
         libAdmin=msg.sender;
     }
 
-    uint amountBooks = 0;
+    uint public amountBooks = 0;
     address libAdmin;
     uint public priceForMonth = 1000 gwei;
 
