@@ -87,7 +87,7 @@ contract ShkebTok is ERC1155{
         accountBalance[_accountId] -= 100 wei;
     }
 
-    function returnBook(uint _accountId) public{
+    function returnAccount(uint _accountId) public{
         require(msg.sender == rentedTo[_accountId], "Only admin");
         safeTransferFrom(msg.sender, libAdmin, _accountId, 1, "");
         delete rentedTo[_accountId];
